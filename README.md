@@ -14,14 +14,13 @@ none.
 
 For example:
 
-This extension contributes the following settings:
-
-* `myExtension.enable`: enable/disable this extension
-* `myExtension.thing`: set to `blah` to do something
+![image](https://github.com/lian8306/copy-json-path/blob/master/readme/images/20200825111601.png)
+![image](https://github.com/lian8306/copy-json-path/blob/master/readme/images/20200825111626.png)
+you will get text as the red border in your clipboard.
 
 ## Known Issues
 
-Calling out known issues can help limit users opening duplicate issues against your extension.
+https://github.com/lian8306/copy-json-path
 
 ## Release Notes
 

@@ -116,7 +116,7 @@ export function activate(context: vscode.ExtensionContext) {
                 }
                 // console.log("list", list);
                 let keyString = list.reverse().map(key => {
-                    return key.replace(/^('|")/, "").replace(/('|")$/, "");
+                    return key.replace(/^(['" 	])+/, "").replace(/(['" 	])+$/, "");
                 }).join(".");
                 vscode.env.clipboard.writeText(keyString).then(() => {
                     vscode.window.showInformationMessage(`复制成功!`, keyString);
