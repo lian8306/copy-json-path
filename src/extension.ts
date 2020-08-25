@@ -64,7 +64,6 @@ export function activate(context: vscode.ExtensionContext) {
                 //聚焦行处理
                 let lineTextReplaceSemiconlon = getReplacedTextByNum(vEditor, lineNum, douhaoReg);
                 if (fenhaoReg.test(lineTextReplaceSemiconlon)) {
-                    console.log("lineTextReplaceSemiconlon", lineTextReplaceSemiconlon, lineNum)
 
                     if (bracketReg.test(lineTextReplaceSemiconlon)) {
                         if (rightBracketReg.test(lineTextReplaceSemiconlon) && leftBracketReg.test(lineTextReplaceSemiconlon)) {
@@ -87,14 +86,11 @@ export function activate(context: vscode.ExtensionContext) {
                     let lineTextReplaceSemiconlon = getReplacedTextByNum(vEditor, i, douhaoReg);
                     // console.log(lineTextReplaceSemiconlon, i);
                     if (fenhaoReg.test(lineTextReplaceSemiconlon)) {
-                        console.log("rightBracketNum", rightBracketNum, i,lineTextReplaceSemiconlon)
                         if (bracketReg.test(lineTextReplaceSemiconlon)) {
 
                             if (rightBracketReg.test(lineTextReplaceSemiconlon) && leftBracketReg.test(lineTextReplaceSemiconlon)) {
                                 continue;
                             } else {
-                                
-                                console.log("rightBracketNum", rightBracketNum, i,lineTextReplaceSemiconlon,leftBracketReg.test(lineTextReplaceSemiconlon),leftBracketReg.test(lineTextReplaceSemiconlon))
                                 if (leftBracketReg.test(lineTextReplaceSemiconlon)) {
                                     if (rightBracketNum == 0) {
                                         pushList(lineTextReplaceSemiconlon, fenhaoReg, list);
@@ -129,12 +125,6 @@ export function activate(context: vscode.ExtensionContext) {
             } else {
                 return "";
             }
-            // console.log(lineNum)
-            // vscode.env.clipboard.readText().then((text) => {
-            //     let clipboard_content = text;
-            //     console.log("clipboard_content", clipboard_content)
-            //     /* code */
-            // });
         };
     }
         // context.subscriptions.push(disposable);
