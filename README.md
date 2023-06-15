@@ -3,6 +3,7 @@
 ## Features
 
 copy json path of code.
+复制json格式嵌套的键。
 
 ## Requirements
 
@@ -23,7 +24,16 @@ This package is used to obtain keys in internationalized files in the developmen
         "label": "name"
     }
 }
-With this extension, you can quickly get the path of the "label":global.label
+With this extension, you can quickly get the path of the "label": "global.label"
+
+这个包用于获取json格式的键名，见常如：国际化配置文件。例如，有以下json的配置：
+{
+    "global":
+    {
+        "label": "name"
+    }
+}
+用这个插件可以快速的获得"label"的路径："global.label"
 
 ## Known Issues
 Home page
